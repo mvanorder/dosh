@@ -12,6 +12,7 @@ clone with git:
 
 Then create ~/.dosh.cfg with the following:
 
-  ```[digitalocean]
+  ```
+  [digitalocean]
     token = <your API token>
   ```
