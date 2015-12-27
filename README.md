@@ -2,14 +2,18 @@
 Digital Ocean Shell
 ===================
 
-CLI for Digital Ocear using **digitalocean-api**
+CLI for Digital Ocear using [digitalocean-api](https://github.com/valerylisay/digitalocean-api/).
 
 How To Install
 ==============
 
-  git clone https://github.com/mvanorder/dosh.git
+clone with git:
 
-add the following to ~/.dosh.cfg
+	git clone https://github.com/mvanorder/dosh.git
 
+Then create ~/.dosh.cfg with the following:
+
+  ```
   [digitalocean]
-    token = <your API token>
+    token = your API token
+  ```
