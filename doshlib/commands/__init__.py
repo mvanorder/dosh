@@ -2,7 +2,9 @@ import doshlib
 import pprint
 
 def help(command):
-    print "help test 2"
+    print "listdroplets"
+    print "dropletup <droplet ID>"
+    print "dropletdown <droplet ID>"
 
 def invalid(command):
     print "Invalid command: " + command
