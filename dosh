@@ -1,0 +1,39 @@
+#! /usr/bin/env python
+
+import sys
+import pprint
+from doshlib import commands
+
+prompt = 'dosh> '
+
+def listdroplets(args):
+    print('Droplets: ')
+    result = client.droplets.all()
+    for i in result['droplets']:
+        print i['id'],i['name']
+
+def processcommand(raw_command):
+    comparts = raw_command.split()
+    com = comparts.pop(0)
+    getattr(commands, com, commands.invalid)(raw_command)
+
+while 1:
+    command = raw_input(prompt)
+    if command == 'exit':
+        break;
+    processcommand(command)
+    
+"""
+Possibly impliment this for up/down arrows:
+while 1:
+    try:
+        line = sys.stdin.readline()
+    except KeyboardInterrupt:
+        break
+
+    if not line:
+        break
+
+    print line
+"""
+print('Goodbye!')
